@@ -1,0 +1,53 @@
+# ---+----------------------Augmented  .gitignore ----------------------------------------------------
+#                              07.000-GitIgnore.txt                                               ---
+#
+#   http://www.railstutorial.org/book/beginning#code-gitignore
+#   Before we push our project up for public viewing we need to set up our gitignore file.  The .gitignore
+#   file is created with the Rails New.
+#   Listing 1.7. An augmented .gitignore file.                                             page 29
+#       -->  http://ruby.railstutorial.org/ruby-on-rails-tutorial-book?version=4.0#code-gitignore
+#
+#   $ gedit  .gitignore         #4.1
+#
+#  Listing 1.7. An augmented .gitignore file.
+#  http://ruby.railstutorial.org/ruby-on-rails-tutorial-book?version=4.0#code-gitignore
+#
+# - root files
+# ------------
+*~
+#
+# - dot files
+# -----------
+.project
+.idea
+.secret
+.DS_store
+#
+# - Ignore bundle files
+# ---------------------
+/.bundle
+bundler_stubs/
+#
+# - Ignore log files
+# ------------------
+/log/*.log
+#
+# - Ignore temp and swap files
+# ----------------------------
+/tmp/*
+/tmp
+*.swp
+#
+# - Ignore the default SQLite database.
+# -------------------------------------
+/db/*.sqlite3
+/db/*.sqlite3-journal
+#
+# - Ignore test files
+# -------------------
+capybara-*.html
+/spec/tmp/*
+#
+# - The database yml file has passwords
+# ------------------------------------
+config/database.yml
