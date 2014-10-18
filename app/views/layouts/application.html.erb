@@ -1,14 +1,39 @@
+<%-# ------------------ application.html.erb ------------------------------------------ %>
+<%-# ---          11.000-Application-html-erb.txt                                       %>
+<%-# ---                      ---                                                       %>
+<%-# https://www.railstutorial.org/book/static_pages#code-application_layout            %>
+<%-# Listing 3.32: The sample application site layout.                                  %>
+<%-#                                                                                    %>
+<%-# gedit app/views/layouts/application.html.erb                                       %>
+<%-#                                                                                    %>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SampleApp8906542317</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%-# ---------------------------------------------------------------------------------- %>
+<%-# ----------------------------- yeild ---------------------------------------------- %>
+<%-# This yeild line of code is a rails function that is responsible for inserting the  %>
+<%-# contents of each page into the layout.                                             %>
 <%= yield %>
-
+<%-# ---------------------------------------------------------------------------------- %>
 </body>
 </html>
+<%-# +-------------------  cross-site request forgery   ------------------------------- %>
+<%-# | This code arranges to include the application stylesheet and JavaScript,         %>
+<%-# | which are part of the asset pipeline (Section 5.2.1), together with the          %>
+<%-# | Rails method csrf_meta_tags, which prevents cross-site request forgery (CSRF),   %>
+<%-# | a type of malicious web attack.                                                  %>
+<%-# | stylesheet_link_tag ...                                                          %>
+<%-# | javascript_include_tag "application", ...                                        %>
+<%-# | csrf_meta_tags                                                                   %>
+<%-# | http://en.wikipedia.org/wiki/Cross-site_request_forgery                          %>
+<%-# +--------------------------------------------------------------------------------- %>
+<%-# +--- stylesheet_link_tag --------------------------------------------------------- %>
+<%-# | Is a built-in Rails function or helper to include a stylesheet link If you       %>
+<%-# | dont specify an extension, .css will be appended automatically.                  %>
+<%-# +--------------------------------------------------------------------------------- %>

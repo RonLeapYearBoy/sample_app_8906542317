@@ -2,30 +2,24 @@
 <%-# ---         11.000-About-html.txt                                                   %>
 <%-# ---                                                                                 %>
 <%-# ----------------------------------------------------------------------------------- %>
-<%-# 3.3.3 Embedded Ruby                                                                 %>
-<%-# https://www.railstutorial.org/book/static_pages#sec-layouts                         %>
+<%-# 3.4.3 Layouts and embedded Ruby (Refactor)                                          %>
+<%-# https://www.railstutorial.org/book/static_pages#sec-layouts_and_embedded_ruby       %>
 <%-#                                                                                     %>
-<%-# Listing 3.31   The view for the About page with an embedded Ruby title.                           %>
-<%-# https://www.railstutorial.org/book/static_pages#code-about_view_erb_title           %>
+<%-# Listing 3.35: The About page with HTML structure removed.                           %>
+<%-# https://www.railstutorial.org/book/static_pages#code-about_view_interior            %>
 <%-#                                                                                     %>
 <%-#  gedit app/views/static_pages/about.html.erb                                        %>
 <%-#                                                                                     %>
 <%-# ----------------------------------------------------------------------------------- %>
-<%-#                                                                                     %>
 <% provide(:title, 'Xbout') %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
-  </head>
-  <body>
-    <h1>About Us</h1>
-    <p>
-      The <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      is a project to make a book and screencasts to teach web development
-      with <a href="http://rubyonrails.org/">Ruby on Rails</a>. This
-      is the sample application for the tutorial.
-    </p>
-  </body>
-</html>
+<h1>About Us</h1>
+<p>
+  The <a href="http://www.railstutorial.org/"><em>Ruby on Rails
+  Tutorial</em></a> is a
+  <a href="http://www.railstutorial.org/book">book</a> and
+  <a href="http://screencasts.railstutorial.org/">screencast series</a>
+  to teach web development with
+  <a href="http://rubyonrails.org/">Ruby on Rails</a>.
+  This is the sample application for the tutorial.
+</p>
 <%-# ----------------------------------------------------------------------------------- %>
