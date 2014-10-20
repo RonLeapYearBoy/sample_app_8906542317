@@ -1,0 +1,31 @@
+<%-# ---------------help.html.erb ----------------------------------------------------- %>
+<%-# -          10.000-Help-html.txt                                                    %>
+<%-# ---------------------------------------------------------------------------------- %>
+<%-# 3.4.3 Layouts and embedded Ruby (Refactor)                                         %>
+<%-# https://www.railstutorial.org/book/static_pages#sec-layouts_and_embedded_ruby      %>
+<%-# ---------------------------------------------------------------------------------- %>
+<%-# Listing 3.30  The view for the Help page with an embedded Ruby title               %>
+<%-# https://www.railstutorial.org/book/static_pages#code-help_view_interior            %>
+<%-#                                                                                    %>
+<%-# gedit app/views/static_pages/help.html.erb                                         %>
+<%-#                                                                                    %>
+<%-# ---------------------------------------------------------------------------------- %>
+<%-#                                                                                    %>
+<% provide(:title, 'Help') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Help</h1>
+    <p>
+      Get help on the Ruby on Rails Tutorial at the
+      <a href="http://railstutorial.org/help">Rails Tutorial help page</a>.
+      To get help on this sample app, see the
+      <a href="http://railstutorial.org/book">Rails Tutorial book</a>.
+    </p>
+  </body>
+</html>
+
+<%-# ----------------------------------------------------------------------------------- %>
